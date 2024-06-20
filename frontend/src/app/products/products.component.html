@@ -1,0 +1,31 @@
+<header class="header-actions">
+<label class="group-title" >Products</label>
+<button class="action-button">Add</button>
+<button class="action-button">Edit</button>
+<button class="action-button">Remove</button>
+</header>
+<div class="products-container">
+    <table>
+        <tr>
+            <th>
+                <label>Product</label>
+            </th>
+            <th>
+                <label>Description</label>
+            </th>
+            <th>
+                <label>Actions</label>
+            </th>
+        </tr>
+        <tr *ngFor="let product of products">
+            <td>{{product.name}}</td>
+            <td>{{product.description}}</td>
+        </tr>
+    </table>
+    <ul>
+        <li *ngFor="let product of products" class="item">
+            <label>{{product.name}}</label> <button>remove</button>
+
+        </li>
+    </ul>
+</div>
